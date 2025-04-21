@@ -75,8 +75,6 @@ class PPOLearner(object):
 
             self._compiled_losses = torch.compile(
                 compute_losses,
-                fullgraph=True,
-                dynamic=True,
                 backend="zentorch",
             )
 
